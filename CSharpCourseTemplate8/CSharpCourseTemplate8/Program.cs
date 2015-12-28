@@ -21,11 +21,11 @@ namespace CSharpCourseTemplate8
 
             if (choice== 'i')
             {
-                Console.WriteLine("The new price is: {0}", (price += price * rate));
+                Console.WriteLine("The new price is: {0:C2}", (price += price * rate));
             }
             else if(choice== 'd')
             {
-                Console.WriteLine("The new price is: {0}", (price -= price * rate));
+                Console.WriteLine("The new price is: {0:C2}", (price -= price * rate));
             }
             else
             {

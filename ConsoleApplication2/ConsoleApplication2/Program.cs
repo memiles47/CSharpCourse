@@ -7,6 +7,7 @@ namespace Entity
     {
         //Use instance variables
         //private means secure to the class, type is Date and Time
+        //The variable name is hireDate in camel case
         private DateTime hireDate;
 
         public Employee(DateTime dt)

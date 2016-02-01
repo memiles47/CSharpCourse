@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 
 namespace Entity
 {
@@ -16,6 +15,5 @@ namespace Entity
             //Sets the instance variable for the current object
             this.hireDate = dt;
         }
-
     }
 }

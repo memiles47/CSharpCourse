@@ -33,7 +33,7 @@ namespace Entity
             for (int i = 0; i < employees.Length; i++)
             {
                 //Next two line gets hire date
-                Console.Write("Enter Employee # " + i + "Hire Date");
+                Console.Write("Enter Employee # " + (i + 1) + " Hire Date: ");
                 hireDate = DateTime.Parse(Console.ReadLine());
                 Console.Clear();
 

@@ -1,8 +1,80 @@
 ﻿using System;
 
-
 namespace ComputingDevice
 {
+    class Program
+    {
+        static void Main()
+        {
+            //Obtain user name
+            Console.Write("Session User:>");
+            string user = Console.ReadLine().ToUpper();
+            ClearConsole();
+
+            //Make new calculator object/class
+            Calculator newCalc = new Calculator(user);
+
+            //Read values entered by user separated by a comma
+            Console.Write("Enter two values separated by a comma:>");
+            string tempInput = Console.ReadLine();
+            ClearConsole();
+
+            //put separated string into array of strings
+            string[] input = tempInput.Split(new char[] { ',' });
+
+            //Obtain User desired function
+            string function = UserFunction();
+
+            switch (function)
+            {
+                case "A":
+                    Console.WriteLine("You Chose to Add");
+                    Console.WriteLine("The sum is: " + newCalc.Add(double.Parse(input[0]), double.Parse(input[1])) + "\n\n");
+                    break;
+
+                case "S":
+                    Console.WriteLine("You Chose to Subtract");
+                    Console.WriteLine("The difference is: " + newCalc.Subtract(double.Parse(input[0]), double.Parse(input[1])) + "\n\n");
+                    break;
+
+                case "M":
+                    Console.WriteLine("You Chose to Multiply");
+                    Console.WriteLine("The product is: " + newCalc.Multiply(double.Parse(input[0]), double.Parse(input[1])) + "\n\n");
+                    break;
+
+                case "D":
+                    Console.WriteLine("You Chose to Divide");
+                    Console.WriteLine("The quotient is: " + newCalc.Divide(double.Parse(input[0]), double.Parse(input[1])) + "\n\n");
+                    break;
+
+                case "Q":
+                    Console.WriteLine("Bye");
+                    break;
+
+                default:
+                    Console.WriteLine("You Chose in invalid option\nTry again...\n\n");
+                    Console.ReadLine();
+                    break;
+            }
+        }
+
+        static string UserFunction()
+        {
+            //User choose Add, Subtract, Multiply or Divide
+            Console.WriteLine("Please Choose function using corresponding letter");
+            Console.WriteLine("<A>dd, <S>ubtract, <M>ultiply, <D>ivide or <Q>uit");
+            Console.Write(">");
+            string function = Console.ReadLine().ToUpper();
+            ClearConsole();
+            return function;
+        }
+
+        static void ClearConsole()
+        {
+            Console.Clear();
+        }
+    }
+
     class Calculator
     {
         public Calculator(string user)
@@ -20,38 +92,22 @@ namespace ComputingDevice
             return x + y;
         }
 
-        public double Divide(double x, double y)
+        public double Subtract(double x, double y)
         {
-            if (y != 0)
-            {
-                //Return division result
-                return x / y;
-            }
-            else
-            {
-                //Return 0 if divide by zero
-                return 0;
-            }
+            //Return subtraction result
+            return x - y;
         }
 
-        static void Main(string[] args)
+        public double Multiply(double x, double y)
         {
-            //Obtain user name
-            Console.Write("Session User:>");
-            string user = Console.ReadLine();
+            //Return multiplication result
+            return x *y;
+        }
 
-            //Make new calculator object/class
-            Calculator newCalc = new Calculator(user);
-
-            //Read values entered by user separated by a comma
-            Console.Write("Enter two values separated by a comma:>");
-            string tempInput = Console.ReadLine();
-
-            //put separated string into array of strings
-            string[] input = tempInput.Split(new char[] { ',' });
-
-            //Add input values
-            Console.WriteLine("The sum is: " + newCalc.Add(double.Parse(input[0]), double.Parse(input[1])));
+        public double Divide(double x, double y)
+        {
+            //Return Division result
+            return y!=0? x / y: 0;
         }
     }
 }

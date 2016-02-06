@@ -23,7 +23,7 @@ namespace ComputingDevice
             string[] input = tempInput.Split(new char[] { ',' });
 
             //Obtain User desired function
-            string function = UserFunction();
+            string function = FunctionSelect();
 
             switch (function)
             {
@@ -58,7 +58,7 @@ namespace ComputingDevice
             }
         }
 
-        static string UserFunction()
+        static string FunctionSelect()
         {
             //User choose Add, Subtract, Multiply or Divide
             Console.WriteLine("Please Choose function using corresponding letter");
@@ -101,7 +101,7 @@ namespace ComputingDevice
         public double Multiply(double x, double y)
         {
             //Return multiplication result
-            return x *y;
+            return x * y;
         }
 
         public double Divide(double x, double y)

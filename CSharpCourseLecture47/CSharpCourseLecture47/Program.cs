@@ -10,11 +10,13 @@ namespace Sample
 
         //Object level instance variable. Varies from person to person
         private string initials = null;
+        private int personID;
 
         public Person(string inits)
         {
-            this.initials = inits;
             personCounter++;
+            this.initials = inits;
+            this.personID = personCounter;
         }
 
         public static int GetPersonCount()

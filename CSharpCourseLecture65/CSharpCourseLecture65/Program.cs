@@ -61,7 +61,7 @@ class TwoDPoint
 
 class PointComparer
 {
-    //Graphical components, controls
+    //Create Graphical components, controls
     static Form frm = new Form();
     static TextBox tb1 = new TextBox();
     static TextBox tb2 = new TextBox();

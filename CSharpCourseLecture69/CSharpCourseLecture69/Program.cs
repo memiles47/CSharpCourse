@@ -16,7 +16,7 @@ class Program
 {
     static void Main()
     {
-        using (StreamWriter writer = File.CreateText(@"E:\misc\log.txt"))
+        using (StreamWriter writer = File.CreateText(@"C:\Users\Michael\log.txt"))
         {
             string s = Console.ReadLine();
             while(s.ToUpper() != "EXIT")
@@ -27,7 +27,7 @@ class Program
             Console.Clear();
         }
 
-        using(StreamReader reader = File.OpenText(@"E:\misc\log.txt"))
+        using (StreamReader reader = File.OpenText(@"C:\Users\Michael\log.txt"))
         {
             string lineToPrint;
             while ((lineToPrint = reader.ReadLine()) != null)

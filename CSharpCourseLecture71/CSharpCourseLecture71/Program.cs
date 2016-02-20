@@ -11,7 +11,7 @@ Lecture 71: Conditional Functions
 
 class Trace
 {
-    #region
+    #region[Conditional Region]
     [Conditional("DEBUG")]
     public static void Message(string traceMessage)
     {

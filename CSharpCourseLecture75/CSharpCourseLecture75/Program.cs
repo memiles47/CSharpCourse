@@ -1,9 +1,10 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+/*
+Display all the files and
+folders in a directory
+*/
 
 class Program
 {

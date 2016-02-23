@@ -32,20 +32,14 @@ class Vehicle
         {
             using (StreamWriter writer = File.AppendText(basePath + "veh.txt"))
             {
-                writer.WriteLine(v.color);
-                writer.WriteLine(v.manufacturer);
-                writer.WriteLine(v.numberOfCylinders);
-                writer.WriteLine(v.vehicleType);
+                writer.WriteLine(v.color + ", " + v.manufacturer + ", " + v.numberOfCylinders + ", " + v.vehicleType);
             }
         }
         else
         {
             using(StreamWriter writer = File.CreateText(basePath + "veh.txt"))
             {
-                writer.WriteLine(v.color);
-                writer.WriteLine(v.manufacturer);
-                writer.WriteLine(v.numberOfCylinders);
-                writer.WriteLine(v.vehicleType);
+                writer.WriteLine(v.color + ", " + v.manufacturer + ", " + v.numberOfCylinders + ", " + v.vehicleType);
             }
         }
     }

@@ -14,9 +14,11 @@ Class
 
 class GenericSwapper<T>
 {
+    //Declare instance variables
     public T x;
     public T y;
-
+    
+    //Create the class contstructor
     public GenericSwapper(T val1, T val2)
     {
         //Set instance values
@@ -24,6 +26,7 @@ class GenericSwapper<T>
         this.y = val2;
     }
 
+    //Switch method
     public void Switch()
     {
         T temp = this.x;

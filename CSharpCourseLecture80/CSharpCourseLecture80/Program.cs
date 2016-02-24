@@ -4,7 +4,7 @@ using System.Diagnostics;           //Open a Program
 using System.Collections.Generic;   //Dictioniary
 
 /*
-Lecture 80: Using Generic Dictionarier
+Lecture 80: Using Generic Dictionaries
 and a Project
 */
 

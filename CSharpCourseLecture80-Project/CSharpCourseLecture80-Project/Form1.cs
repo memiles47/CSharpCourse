@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System;                       //Console
+using System.Collections.Generic;   //Dictionaries, Lists, IEnumerable
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.Linq;                  //Queries
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +21,9 @@ namespace CSharpCourseLecture80_Project
 
             //Sets the path of the browser dialog box
             dlg_browse.SelectedPath = path;
+
+            //Create dictionary
+            Dictionary<string, string> dict = new Dictionary<string, string>();
         }
 
         private void btn_browse_Click(object sender, EventArgs e)
@@ -30,6 +33,11 @@ namespace CSharpCourseLecture80_Project
             {
                 tb_path.Text = dlg_browse.SelectedPath;
             }
+        }
+
+        private void btn_addToDictionary_Click(object sender, EventArgs e)
+        {
+            dict.Add(tb_key.Text, tb_value.Text)
         }
     }
 }

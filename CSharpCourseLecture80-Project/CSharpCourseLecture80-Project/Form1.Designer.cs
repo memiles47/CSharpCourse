@@ -87,6 +87,7 @@
             this.btn_addToDictionary.TabIndex = 4;
             this.btn_addToDictionary.Text = "Add To Dictionary";
             this.btn_addToDictionary.UseVisualStyleBackColor = true;
+            this.btn_addToDictionary.Click += new System.EventHandler(this.btn_addToDictionary_Click);
             // 
             // btn_saveToDisk
             // 

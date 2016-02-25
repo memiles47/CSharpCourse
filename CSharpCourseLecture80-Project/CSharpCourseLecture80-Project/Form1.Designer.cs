@@ -39,6 +39,7 @@
             this.tb_path = new System.Windows.Forms.TextBox();
             this.btn_browse = new System.Windows.Forms.Button();
             this.lbl_saveToDisk = new System.Windows.Forms.Label();
+            this.dlg_browse = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // lbl_key
@@ -130,10 +131,11 @@
             this.btn_browse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_browse.Location = new System.Drawing.Point(730, 350);
             this.btn_browse.Name = "btn_browse";
-            this.btn_browse.Size = new System.Drawing.Size(110, 40);
+            this.btn_browse.Size = new System.Drawing.Size(110, 44);
             this.btn_browse.TabIndex = 9;
             this.btn_browse.Text = "Browse";
             this.btn_browse.UseVisualStyleBackColor = true;
+            this.btn_browse.Click += new System.EventHandler(this.btn_browse_Click);
             // 
             // lbl_saveToDisk
             // 
@@ -181,6 +183,7 @@
         private System.Windows.Forms.TextBox tb_path;
         private System.Windows.Forms.Button btn_browse;
         private System.Windows.Forms.Label lbl_saveToDisk;
+        private System.Windows.Forms.FolderBrowserDialog dlg_browse;
     }
 }
 

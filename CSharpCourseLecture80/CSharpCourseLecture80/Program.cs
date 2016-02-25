@@ -1,7 +1,7 @@
 ﻿using System;                       //Console
 using System.IO;                    //Writing Files
 using System.Diagnostics;           //Open a Program
-using System.Collections.Generic;   //Dictioniary
+using System.Collections.Generic;   //Dictionary
 
 /*
 Lecture 80: Using Generic Dictionaries
@@ -40,7 +40,7 @@ namespace CSharpCourseLecture80
             {
                 foreach(var pair in entries)
                 {
-                    writer.WriteLine(pair.Key + ", " + pair.Value);
+                    writer.WriteLine($"{pair.Key}, {pair.Value}");
                 }
             }
         }

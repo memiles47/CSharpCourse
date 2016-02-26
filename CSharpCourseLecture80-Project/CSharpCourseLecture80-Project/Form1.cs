@@ -1,5 +1,6 @@
 ﻿using System;                       //Console
 using System.Collections.Generic;   //Dictionaries, Lists, IEnumerable
+using System.IO;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,6 +13,9 @@ namespace CSharpCourseLecture80_Project
 {
     public partial class Form1 : Form
     {
+        //Create dictionary
+        Dictionary<string, string> dict = new Dictionary<string, string>();
+
         public Form1()
         {
             InitializeComponent();
@@ -22,8 +26,25 @@ namespace CSharpCourseLecture80_Project
             //Sets the path of the browser dialog box
             dlg_browse.SelectedPath = path;
 
-            //Create dictionary
-            Dictionary<string, string> dict = new Dictionary<string, string>();
+        }
+
+        private void SaveDictionary(Dictionary<string, string> entries)
+        {
+            if (tb_path.Text != "")
+            {
+                string correctedPath = tb_path.Text.Replace("\\\\", "\\");
+                using (StreamWriter writer = File.CreateText($"{correctedPath}\\family.txt"))
+                {
+                    foreach (var pair in entries)
+                    {
+                        writer.WriteLine($"{pair.Key}, {pair.Value}");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("You must select a path for saving to disk");
+            }
         }
 
         private void btn_browse_Click(object sender, EventArgs e)
@@ -37,7 +58,14 @@ namespace CSharpCourseLecture80_Project
 
         private void btn_addToDictionary_Click(object sender, EventArgs e)
         {
-            dict.Add(tb_key.Text, tb_value.Text)
+            dict.Add(tb_key.Text, tb_value.Text);
+            tb_key.Text = "";
+            tb_value.Text = "";
+        }
+
+        private void btn_saveToDisk_Click(object sender, EventArgs e)
+        {
+            SaveDictionary(dict);
         }
     }
 }

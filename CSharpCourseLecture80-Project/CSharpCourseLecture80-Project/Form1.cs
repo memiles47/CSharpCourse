@@ -30,10 +30,9 @@ namespace CSharpCourseLecture80_Project
 
         private void SaveDictionary(Dictionary<string, string> entries)
         {
-            if (tb_path.Text != "")
+            if (tb_path.Text != "" && tb_fileName.Text != "")
             {
-                string correctedPath = tb_path.Text.Replace("\\\\", "\\");
-                using (StreamWriter writer = File.CreateText($"{correctedPath}\\family.txt"))
+                using (StreamWriter writer = File.CreateText($"{tb_path.Text.Replace("\\\\","\\")}\\{tb_fileName.Text}.txt"))
                 {
                     foreach (var pair in entries)
                     {
@@ -43,7 +42,7 @@ namespace CSharpCourseLecture80_Project
             }
             else
             {
-                MessageBox.Show("You must select a path for saving to disk");
+                MessageBox.Show("You must enter a path AND file name for saving to disk");
             }
         }
 

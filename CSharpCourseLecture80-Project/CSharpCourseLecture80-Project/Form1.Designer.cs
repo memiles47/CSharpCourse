@@ -40,6 +40,10 @@
             this.btn_browse = new System.Windows.Forms.Button();
             this.lbl_saveToDisk = new System.Windows.Forms.Label();
             this.dlg_browse = new System.Windows.Forms.FolderBrowserDialog();
+            this.lbl_fileName = new System.Windows.Forms.Label();
+            this.tb_fileName = new System.Windows.Forms.TextBox();
+            this.lbl_extention = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_key
@@ -57,7 +61,7 @@
             // 
             this.tb_key.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_key.Location = new System.Drawing.Point(561, 59);
-            this.tb_key.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_key.Margin = new System.Windows.Forms.Padding(4);
             this.tb_key.Name = "tb_key";
             this.tb_key.Size = new System.Drawing.Size(199, 44);
             this.tb_key.TabIndex = 1;
@@ -77,7 +81,7 @@
             // 
             this.tb_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_value.Location = new System.Drawing.Point(561, 125);
-            this.tb_value.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_value.Margin = new System.Windows.Forms.Padding(4);
             this.tb_value.Name = "tb_value";
             this.tb_value.Size = new System.Drawing.Size(199, 44);
             this.tb_value.TabIndex = 3;
@@ -86,7 +90,7 @@
             // 
             this.btn_addToDictionary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addToDictionary.Location = new System.Drawing.Point(65, 208);
-            this.btn_addToDictionary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_addToDictionary.Margin = new System.Windows.Forms.Padding(4);
             this.btn_addToDictionary.Name = "btn_addToDictionary";
             this.btn_addToDictionary.Size = new System.Drawing.Size(1055, 50);
             this.btn_addToDictionary.TabIndex = 4;
@@ -98,7 +102,7 @@
             // 
             this.btn_saveToDisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_saveToDisk.Location = new System.Drawing.Point(65, 285);
-            this.btn_saveToDisk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_saveToDisk.Margin = new System.Windows.Forms.Padding(4);
             this.btn_saveToDisk.Name = "btn_saveToDisk";
             this.btn_saveToDisk.Size = new System.Drawing.Size(1055, 50);
             this.btn_saveToDisk.TabIndex = 5;
@@ -110,7 +114,7 @@
             // 
             this.btn_openInNotepad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_openInNotepad.Location = new System.Drawing.Point(65, 362);
-            this.btn_openInNotepad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_openInNotepad.Margin = new System.Windows.Forms.Padding(4);
             this.btn_openInNotepad.Name = "btn_openInNotepad";
             this.btn_openInNotepad.Size = new System.Drawing.Size(1055, 50);
             this.btn_openInNotepad.TabIndex = 6;
@@ -131,8 +135,8 @@
             // tb_path
             // 
             this.tb_path.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_path.Location = new System.Drawing.Point(232, 441);
-            this.tb_path.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_path.Location = new System.Drawing.Point(233, 446);
+            this.tb_path.Margin = new System.Windows.Forms.Padding(4);
             this.tb_path.Name = "tb_path";
             this.tb_path.Size = new System.Drawing.Size(732, 44);
             this.tb_path.TabIndex = 8;
@@ -141,7 +145,7 @@
             // 
             this.btn_browse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_browse.Location = new System.Drawing.Point(973, 438);
-            this.btn_browse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_browse.Margin = new System.Windows.Forms.Padding(4);
             this.btn_browse.Name = "btn_browse";
             this.btn_browse.Size = new System.Drawing.Size(147, 55);
             this.btn_browse.TabIndex = 9;
@@ -160,11 +164,53 @@
             this.lbl_saveToDisk.TabIndex = 10;
             this.lbl_saveToDisk.Text = "Saved To Disk:";
             // 
+            // lbl_fileName
+            // 
+            this.lbl_fileName.AutoSize = true;
+            this.lbl_fileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fileName.Location = new System.Drawing.Point(58, 512);
+            this.lbl_fileName.Name = "lbl_fileName";
+            this.lbl_fileName.Size = new System.Drawing.Size(163, 37);
+            this.lbl_fileName.TabIndex = 11;
+            this.lbl_fileName.Text = "File Name";
+            // 
+            // tb_fileName
+            // 
+            this.tb_fileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_fileName.Location = new System.Drawing.Point(232, 505);
+            this.tb_fileName.Name = "tb_fileName";
+            this.tb_fileName.Size = new System.Drawing.Size(349, 44);
+            this.tb_fileName.TabIndex = 12;
+            // 
+            // lbl_extention
+            // 
+            this.lbl_extention.AutoSize = true;
+            this.lbl_extention.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_extention.Location = new System.Drawing.Point(587, 512);
+            this.lbl_extention.Name = "lbl_extention";
+            this.lbl_extention.Size = new System.Drawing.Size(59, 37);
+            this.lbl_extention.TabIndex = 13;
+            this.lbl_extention.Text = ".txt";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(280, 562);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "DO NOT ENTER FILE EXTENTION";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 739);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_extention);
+            this.Controls.Add(this.tb_fileName);
+            this.Controls.Add(this.lbl_fileName);
             this.Controls.Add(this.lbl_saveToDisk);
             this.Controls.Add(this.btn_browse);
             this.Controls.Add(this.tb_path);
@@ -176,7 +222,7 @@
             this.Controls.Add(this.lbl_value);
             this.Controls.Add(this.tb_key);
             this.Controls.Add(this.lbl_key);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -198,6 +244,10 @@
         private System.Windows.Forms.Button btn_browse;
         private System.Windows.Forms.Label lbl_saveToDisk;
         private System.Windows.Forms.FolderBrowserDialog dlg_browse;
+        private System.Windows.Forms.Label lbl_fileName;
+        private System.Windows.Forms.TextBox tb_fileName;
+        private System.Windows.Forms.Label lbl_extention;
+        private System.Windows.Forms.Label label1;
     }
 }
 

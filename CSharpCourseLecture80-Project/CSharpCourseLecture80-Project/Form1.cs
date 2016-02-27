@@ -23,19 +23,29 @@ namespace CSharpCourseLecture80_Project
 
         private void SaveDictionary(Dictionary<string, string> entries)
         {
-            if (tb_path.Text != "" && tb_fileName.Text != "")
+            try
             {
-                using (StreamWriter writer = File.CreateText($"{tb_path.Text.Replace("\\\\","\\")}\\{tb_fileName.Text}.txt"))
+                if (tb_path.Text != "" && tb_fileName.Text != "")
                 {
-                    foreach (var pair in entries)
+                    using (StreamWriter writer = File.CreateText($"{tb_path.Text.Replace("\\\\", "\\")}\\{tb_fileName.Text}.txt"))
                     {
-                        writer.WriteLine($"{pair.Key}, {pair.Value}");
+                        foreach (var pair in entries)
+                        {
+                            writer.WriteLine($"{pair.Key}, {pair.Value}");
+                        }
                     }
+                    //Write status of action to form
+                    lbl_actionStatus.Text = "Save Complete";
                 }
+                else
+                {
+                    MessageBox.Show("You must enter a path AND file name for saving to disk");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("You must enter a path AND file name for saving to disk");
+                lbl_actionStatus.Text = ex.Message;
             }
         }
 
@@ -58,7 +68,7 @@ namespace CSharpCourseLecture80_Project
             }
             else
             {
-                MessageBox.Show("You must enter a Key and Value before saving to disk");
+                MessageBox.Show("You must enter a Key and Value before adding to the dictionary");
             }
         }
 

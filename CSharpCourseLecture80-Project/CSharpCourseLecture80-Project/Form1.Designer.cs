@@ -44,6 +44,7 @@
             this.tb_fileName = new System.Windows.Forms.TextBox();
             this.lbl_extention = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbl_actionStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_key
@@ -202,11 +203,21 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "DO NOT ENTER FILE EXTENTION";
             // 
+            // lbl_actionStatus
+            // 
+            this.lbl_actionStatus.AutoSize = true;
+            this.lbl_actionStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_actionStatus.Location = new System.Drawing.Point(306, 618);
+            this.lbl_actionStatus.Name = "lbl_actionStatus";
+            this.lbl_actionStatus.Size = new System.Drawing.Size(0, 37);
+            this.lbl_actionStatus.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 739);
+            this.Controls.Add(this.lbl_actionStatus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_extention);
             this.Controls.Add(this.tb_fileName);
@@ -248,6 +259,7 @@
         private System.Windows.Forms.TextBox tb_fileName;
         private System.Windows.Forms.Label lbl_extention;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_actionStatus;
     }
 }
 

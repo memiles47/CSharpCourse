@@ -1,12 +1,6 @@
 ﻿using System;                       //Console
 using System.Collections.Generic;   //Dictionaries, Lists, IEnumerable
 using System.IO;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;                  //Queries
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharpCourseLecture80_Project
@@ -25,7 +19,6 @@ namespace CSharpCourseLecture80_Project
 
             //Sets the path of the browser dialog box
             dlg_browse.SelectedPath = path;
-
         }
 
         private void SaveDictionary(Dictionary<string, string> entries)
@@ -57,9 +50,16 @@ namespace CSharpCourseLecture80_Project
 
         private void btn_addToDictionary_Click(object sender, EventArgs e)
         {
-            dict.Add(tb_key.Text, tb_value.Text);
-            tb_key.Text = "";
-            tb_value.Text = "";
+            if (tb_key.Text != "" & tb_value.Text != "")
+            {
+                dict.Add(tb_key.Text, tb_value.Text);
+                tb_key.Text = "";
+                tb_value.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("You must enter a Key and Value before saving to disk");
+            }
         }
 
         private void btn_saveToDisk_Click(object sender, EventArgs e)

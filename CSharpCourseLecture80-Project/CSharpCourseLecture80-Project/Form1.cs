@@ -2,6 +2,7 @@
 using System.Collections.Generic;   //Dictionaries, Lists, IEnumerable
 using System.IO;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CSharpCourseLecture80_Project
 {
@@ -27,7 +28,7 @@ namespace CSharpCourseLecture80_Project
             {
                 if (tb_path.Text != "" && tb_fileName.Text != "")
                 {
-                    using (StreamWriter writer = File.CreateText($"{tb_path.Text.Replace("\\\\", "\\")}\\{tb_fileName.Text}.txt"))
+                    using (StreamWriter writer = File.AppendText($"{tb_path.Text.Replace("\\\\", "\\")}\\{tb_fileName.Text}.txt"))
                     {
                         foreach (var pair in entries)
                         {
@@ -75,6 +76,11 @@ namespace CSharpCourseLecture80_Project
         private void btn_saveToDisk_Click(object sender, EventArgs e)
         {
             SaveDictionary(dict);
+        }
+
+        private void btn_openInNotepad_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"notepad.exe", $"{tb_path.Text.Replace("\\\\", "\\")}\\{tb_fileName.Text}.txt");
         }
     }
 }

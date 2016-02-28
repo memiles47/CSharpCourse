@@ -114,6 +114,7 @@
             this.btn_openInNotepad.TabIndex = 6;
             this.btn_openInNotepad.Text = "Open in Notepad";
             this.btn_openInNotepad.UseVisualStyleBackColor = true;
+            this.btn_openInNotepad.Click += new System.EventHandler(this.btn_openInNotepad_Click);
             // 
             // lbl_enterPath
             // 

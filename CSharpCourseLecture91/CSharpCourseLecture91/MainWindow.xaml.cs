@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CSharpCourseLecture91
 {
@@ -36,7 +25,7 @@ namespace CSharpCourseLecture91
             switch (cbo_ops.SelectedIndex)
             {
                 case 0:
-                    lbl_result.Content = y != 0 ? (x / y).ToString() : "Err: Div by zero";
+                    lbl_result.Content = y != 0 ? Math.Round(x / y, 2).ToString() : "Err: Div by zero";
                     break;
 
                 case 1:

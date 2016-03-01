@@ -33,13 +33,13 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dlg_openFile = new System.Windows.Forms.OpenFileDialog();
             this.rtb_fileContent = new System.Windows.Forms.RichTextBox();
             this.dlg_saveFile = new System.Windows.Forms.SaveFileDialog();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dlg_print = new System.Windows.Forms.PrintDialog();
             this.dlg_printPreview = new System.Windows.Forms.PrintPreviewDialog();
-            this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_fileMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,8 @@
             this.fileToolStripMenuItem});
             this.mnu_fileMenu.Location = new System.Drawing.Point(0, 0);
             this.mnu_fileMenu.Name = "mnu_fileMenu";
-            this.mnu_fileMenu.Size = new System.Drawing.Size(1361, 42);
+            this.mnu_fileMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.mnu_fileMenu.Size = new System.Drawing.Size(1021, 33);
             this.mnu_fileMenu.TabIndex = 0;
             this.mnu_fileMenu.Text = "menuStrip1";
             // 
@@ -62,22 +63,36 @@
             this.printToolStripMenuItem,
             this.printPreviewToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 38);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(269, 38);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(211, 30);
             this.toolStripMenuItem2.Text = "Open";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            // 
+            // printPreviewToolStripMenuItem
+            // 
+            this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.printPreviewToolStripMenuItem.Text = "Print Preview";
+            this.printPreviewToolStripMenuItem.Click += new System.EventHandler(this.printPreviewToolStripMenuItem_Click);
             // 
             // dlg_openFile
             // 
@@ -86,18 +101,12 @@
             // rtb_fileContent
             // 
             this.rtb_fileContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtb_fileContent.Location = new System.Drawing.Point(0, 42);
+            this.rtb_fileContent.Location = new System.Drawing.Point(0, 33);
+            this.rtb_fileContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rtb_fileContent.Name = "rtb_fileContent";
-            this.rtb_fileContent.Size = new System.Drawing.Size(1361, 1096);
+            this.rtb_fileContent.Size = new System.Drawing.Size(1021, 877);
             this.rtb_fileContent.TabIndex = 1;
             this.rtb_fileContent.Text = "";
-            // 
-            // printToolStripMenuItem
-            // 
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
-            this.printToolStripMenuItem.Text = "Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // dlg_print
             // 
@@ -113,20 +122,15 @@
             this.dlg_printPreview.Name = "dlg_printPreview";
             this.dlg_printPreview.Visible = false;
             // 
-            // printPreviewToolStripMenuItem
-            // 
-            this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
-            this.printPreviewToolStripMenuItem.Text = "Print Preview";
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1361, 1138);
+            this.ClientSize = new System.Drawing.Size(1021, 910);
             this.Controls.Add(this.rtb_fileContent);
             this.Controls.Add(this.mnu_fileMenu);
             this.MainMenuStrip = this.mnu_fileMenu;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "CSharp Course Lecture 96, 97 and 98";
             this.mnu_fileMenu.ResumeLayout(false);

@@ -17,7 +17,7 @@ namespace CSharpCourseLecture96
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            //Seting initial directory for file => Open
+            //Setting initial directory for file => Open
             dlg_openFile.InitialDirectory = @"c:\users\michael\data";
 
             //Setting filters for open file dialog
@@ -46,7 +46,7 @@ namespace CSharpCourseLecture96
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Seting initial directory for file => Open
+            //Setting initial directory for file => Open
             dlg_saveFile.InitialDirectory = @"c:\users\michael\data";
 
             //Setting filters for open file dialog
@@ -78,11 +78,28 @@ namespace CSharpCourseLecture96
         {
             dlg_print.PrintToFile = true;
             dlg_print.Document = myDocument;
-            dlg_print.printDialogResult = dlg_print.ShowDialog();
-            if (printDialogeResult == DialogResult.OK)
+            DialogResult printDialogResult = dlg_print.ShowDialog();
+            if (printDialogResult == DialogResult.OK)
             {
                 myDocument.PrintPage += new PrintPageEventHandler(doc_PrintPage);
+                myDocument.Print();
             }
+        }
+
+        private void doc_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            //Create font
+            System.Drawing.Font writeFont = new System.Drawing.Font("Times New Roman", 12, System.Drawing.FontStyle.Regular);
+
+            //What is to be printed, font, color and x,y position
+            e.Graphics.DrawString(rtb_fileContent.Text, writeFont, System.Drawing.Brushes.Blue, 50, 50);
+        }
+
+        private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dlg_printPreview.Document = myDocument;
+            myDocument.PrintPage += new PrintPageEventHandler(doc_PrintPage);
+            dlg_printPreview.Show();
         }
     }
 }

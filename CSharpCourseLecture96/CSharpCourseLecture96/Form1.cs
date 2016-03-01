@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Printing;
 
 namespace CSharpCourseLecture96
 {
     public partial class Form1 : Form
     {
+        //Initialize an instance of a new PrintDocument
+        PrintDocument myDocument = new PrintDocument();
+
         public Form1()
         {
             InitializeComponent();
@@ -67,6 +71,17 @@ namespace CSharpCourseLecture96
                         MessageBox.Show(ex.Message, "Oops...!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+            }
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dlg_print.PrintToFile = true;
+            dlg_print.Document = myDocument;
+            dlg_print.printDialogResult = dlg_print.ShowDialog();
+            if (printDialogeResult == DialogResult.OK)
+            {
+                myDocument.PrintPage += new PrintPageEventHandler(doc_PrintPage);
             }
         }
     }

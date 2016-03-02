@@ -19,6 +19,8 @@ namespace CSharpCourseLecture101
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sampleDataSet2.Table' table. You can move, or remove it, as needed.
+            this.tableTableAdapter2.Fill(this.sampleDataSet2.Table);
             // TODO: This line of code loads data into the 'sampleDataSet1.Table' table. You can move, or remove it, as needed.
             this.tableTableAdapter1.Fill(this.sampleDataSet1.Table);
             // TODO: This line of code loads data into the 'sampleDataSet.Table' table. You can move, or remove it, as needed.

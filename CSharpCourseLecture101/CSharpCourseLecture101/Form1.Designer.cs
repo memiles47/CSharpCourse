@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sampleDataSet1 = new CSharpCourseLecture101.SampleDataSet1();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -47,49 +49,63 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outputDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sampleDataSet = new CSharpCourseLecture101.SampleDataSet();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter = new CSharpCourseLecture101.SampleDataSetTableAdapters.TableTableAdapter();
-            this.sampleDataSet1 = new CSharpCourseLecture101.SampleDataSet1();
-            this.tableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter1 = new CSharpCourseLecture101.SampleDataSet1TableAdapters.TableTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.outputDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sampleDataSet2 = new CSharpCourseLecture101.SampleDataSet2();
+            this.tableBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tableTableAdapter2 = new CSharpCourseLecture101.SampleDataSet2TableAdapters.TableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.DataSource = this.tableBindingSource1;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            this.chart1.DataSource = this.tableBindingSource2;
             this.chart1.Dock = System.Windows.Forms.DockStyle.Left;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.XValueMember = "Id";
-            series1.YValueMembers = "Output";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(632, 1129);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.XValueMember = "Id";
+            series2.YValueMembers = "Output";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(474, 903);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            // 
+            // tableBindingSource1
+            // 
+            this.tableBindingSource1.DataMember = "Table";
+            this.tableBindingSource1.DataSource = this.sampleDataSet1;
+            // 
+            // sampleDataSet1
+            // 
+            this.sampleDataSet1.DataSetName = "SampleDataSet1";
+            this.sampleDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.tableBindingSource1;
+            this.bindingNavigator1.BindingSource = this.tableBindingSource2;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(32, 32);
@@ -105,14 +121,14 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(632, 0);
+            this.bindingNavigator1.Location = new System.Drawing.Point(474, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(742, 39);
+            this.bindingNavigator1.Size = new System.Drawing.Size(556, 39);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -129,7 +145,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(71, 36);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 36);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -171,7 +187,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 39);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 31);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -210,12 +226,25 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.outputDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tableBindingSource1;
+            this.dataGridView1.DataSource = this.tableBindingSource2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(632, 39);
+            this.dataGridView1.Location = new System.Drawing.Point(474, 39);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(742, 1090);
+            this.dataGridView1.Size = new System.Drawing.Size(556, 864);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // outputDataGridViewTextBoxColumn
+            // 
+            this.outputDataGridViewTextBoxColumn.DataPropertyName = "Output";
+            this.outputDataGridViewTextBoxColumn.HeaderText = "Output";
+            this.outputDataGridViewTextBoxColumn.Name = "outputDataGridViewTextBoxColumn";
             // 
             // sampleDataSet
             // 
@@ -231,52 +260,47 @@
             // 
             this.tableTableAdapter.ClearBeforeFill = true;
             // 
-            // sampleDataSet1
-            // 
-            this.sampleDataSet1.DataSetName = "SampleDataSet1";
-            this.sampleDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tableBindingSource1
-            // 
-            this.tableBindingSource1.DataMember = "Table";
-            this.tableBindingSource1.DataSource = this.sampleDataSet1;
-            // 
             // tableTableAdapter1
             // 
             this.tableTableAdapter1.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // sampleDataSet2
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.sampleDataSet2.DataSetName = "SampleDataSet2";
+            this.sampleDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // outputDataGridViewTextBoxColumn
+            // tableBindingSource2
             // 
-            this.outputDataGridViewTextBoxColumn.DataPropertyName = "Output";
-            this.outputDataGridViewTextBoxColumn.HeaderText = "Output";
-            this.outputDataGridViewTextBoxColumn.Name = "outputDataGridViewTextBoxColumn";
+            this.tableBindingSource2.DataMember = "Table";
+            this.tableBindingSource2.DataSource = this.sampleDataSet2;
+            // 
+            // tableTableAdapter2
+            // 
+            this.tableTableAdapter2.ClearBeforeFill = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1374, 1129);
+            this.ClientSize = new System.Drawing.Size(1030, 903);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.chart1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,6 +330,9 @@
         private SampleDataSet1TableAdapters.TableTableAdapter tableTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn outputDataGridViewTextBoxColumn;
+        private SampleDataSet2 sampleDataSet2;
+        private System.Windows.Forms.BindingSource tableBindingSource2;
+        private SampleDataSet2TableAdapters.TableTableAdapter tableTableAdapter2;
     }
 }
 

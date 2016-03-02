@@ -33,5 +33,16 @@ namespace CSharpCourseLecture101.Properties {
                 return ((string)(this["SampleConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MEM_SURFACE\\SQLEXPRESS;Initial Catalog=Sample;Integrated Security=Tru" +
+            "e")]
+        public string SampleConnectionString1 {
+            get {
+                return ((string)(this["SampleConnectionString1"]));
+            }
+        }
     }
 }

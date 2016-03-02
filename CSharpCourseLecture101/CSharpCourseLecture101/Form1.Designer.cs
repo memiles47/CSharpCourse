@@ -32,10 +32,11 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sampleDataSet1 = new CSharpCourseLecture101.SampleDataSet1();
+            this.tableBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sampleDataSet2 = new CSharpCourseLecture101.SampleDataSet2();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -51,23 +52,14 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.outputDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sampleDataSet = new CSharpCourseLecture101.SampleDataSet();
-            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tableTableAdapter = new CSharpCourseLecture101.SampleDataSetTableAdapters.TableTableAdapter();
-            this.tableTableAdapter1 = new CSharpCourseLecture101.SampleDataSet1TableAdapters.TableTableAdapter();
-            this.sampleDataSet2 = new CSharpCourseLecture101.SampleDataSet2();
-            this.tableBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter2 = new CSharpCourseLecture101.SampleDataSet2TableAdapters.TableTableAdapter();
+            this.cbo_tableList = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
@@ -79,28 +71,30 @@
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
+            series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "Test Scores";
             series2.XValueMember = "Id";
             series2.YValueMembers = "Output";
             this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(474, 903);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            title2.Name = "Test Scores";
+            this.chart1.Titles.Add(title2);
             // 
-            // tableBindingSource1
+            // tableBindingSource2
             // 
-            this.tableBindingSource1.DataMember = "Table";
-            this.tableBindingSource1.DataSource = this.sampleDataSet1;
+            this.tableBindingSource2.DataMember = "Table";
+            this.tableBindingSource2.DataSource = this.sampleDataSet2;
             // 
-            // sampleDataSet1
+            // sampleDataSet2
             // 
-            this.sampleDataSet1.DataSetName = "SampleDataSet1";
-            this.sampleDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.sampleDataSet2.DataSetName = "SampleDataSet2";
+            this.sampleDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigator1
             // 
@@ -229,7 +223,7 @@
             this.dataGridView1.DataSource = this.tableBindingSource2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(474, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(556, 864);
             this.dataGridView1.TabIndex = 2;
@@ -246,61 +240,38 @@
             this.outputDataGridViewTextBoxColumn.HeaderText = "Output";
             this.outputDataGridViewTextBoxColumn.Name = "outputDataGridViewTextBoxColumn";
             // 
-            // sampleDataSet
-            // 
-            this.sampleDataSet.DataSetName = "SampleDataSet";
-            this.sampleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tableBindingSource
-            // 
-            this.tableBindingSource.DataMember = "Table";
-            this.tableBindingSource.DataSource = this.sampleDataSet;
-            // 
-            // tableTableAdapter
-            // 
-            this.tableTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableTableAdapter1
-            // 
-            this.tableTableAdapter1.ClearBeforeFill = true;
-            // 
-            // sampleDataSet2
-            // 
-            this.sampleDataSet2.DataSetName = "SampleDataSet2";
-            this.sampleDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tableBindingSource2
-            // 
-            this.tableBindingSource2.DataMember = "Table";
-            this.tableBindingSource2.DataSource = this.sampleDataSet2;
-            // 
             // tableTableAdapter2
             // 
             this.tableTableAdapter2.ClearBeforeFill = true;
+            // 
+            // cbo_tableList
+            // 
+            this.cbo_tableList.FormattingEnabled = true;
+            this.cbo_tableList.Location = new System.Drawing.Point(310, 116);
+            this.cbo_tableList.Name = "cbo_tableList";
+            this.cbo_tableList.Size = new System.Drawing.Size(130, 28);
+            this.cbo_tableList.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 903);
+            this.Controls.Add(this.cbo_tableList);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.chart1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,17 +293,12 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private SampleDataSet sampleDataSet;
-        private System.Windows.Forms.BindingSource tableBindingSource;
-        private SampleDataSetTableAdapters.TableTableAdapter tableTableAdapter;
-        private SampleDataSet1 sampleDataSet1;
-        private System.Windows.Forms.BindingSource tableBindingSource1;
-        private SampleDataSet1TableAdapters.TableTableAdapter tableTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn outputDataGridViewTextBoxColumn;
         private SampleDataSet2 sampleDataSet2;
         private System.Windows.Forms.BindingSource tableBindingSource2;
         private SampleDataSet2TableAdapters.TableTableAdapter tableTableAdapter2;
+        private System.Windows.Forms.ComboBox cbo_tableList;
     }
 }
 

@@ -15,6 +15,7 @@ namespace CSharpCourseLecture105
             InitializeComponent();
         }
 
+        #region Create and write file
         private void btn_bigFile_Click(object sender, EventArgs e)
         {
             pb_progressBar.Value = 0;
@@ -28,7 +29,9 @@ namespace CSharpCourseLecture105
                 }
             }
         }
+        #endregion
 
+        #region Open and read file
         private void btn_loadBigFile_Click(object sender, EventArgs e)
         {
             pb_progressBar.Value = 0;
@@ -43,5 +46,6 @@ namespace CSharpCourseLecture105
                 }
             }
         }
+        #endregion
     }
 }

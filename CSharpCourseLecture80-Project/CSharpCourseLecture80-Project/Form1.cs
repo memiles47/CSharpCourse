@@ -1,7 +1,7 @@
 ﻿using System;                       //Console
 using System.Collections.Generic;   //Dictionaries, Lists, IEnumerable
-using System.IO;
-using System.Windows.Forms;
+using System.IO;                    //Disk read/write access
+using System.Windows.Forms;         //Windows Forms
 using System.Diagnostics;
 
 namespace CSharpCourseLecture80_Project
@@ -28,7 +28,7 @@ namespace CSharpCourseLecture80_Project
             {
                 if (tb_path.Text != "" && tb_fileName.Text != "")
                 {
-                    using (StreamWriter writer = File.AppendText($"{tb_path.Text.Replace("\\\\", "\\")}\\{tb_fileName.Text}.txt"))
+                    using (StreamWriter writer = File.AppendText(@tb_path.Text + @"\" + @tb_fileName.Text + ".txt"))
                     {
                         foreach (var pair in entries)
                         {

@@ -80,7 +80,7 @@ namespace CSharpCourseLecture80_Project
 
         private void btn_openInNotepad_Click(object sender, EventArgs e)
         {
-            Process.Start(@"notepad.exe", $"{tb_Path.Text.Replace("\\\\", "\\")}\\{tb_FileName.Text}.txt");
+            Process.Start("notepad.exe", tb_Path.Text + @"\" + tb_FileName.Text + ".txt");
         }
     }
 }

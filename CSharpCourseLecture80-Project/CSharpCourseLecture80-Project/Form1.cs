@@ -6,12 +6,12 @@ using System.Diagnostics;
 
 namespace CSharpCourseLecture80_Project
 {
-    public partial class Form1 : Form
+    public partial class frm_Main : Form
     {
         //Create dictionary
         Dictionary<string, string> dict = new Dictionary<string, string>();
 
-        public Form1()
+        public frm_Main()
         {
             InitializeComponent();
 
@@ -26,9 +26,9 @@ namespace CSharpCourseLecture80_Project
         {
             try
             {
-                if (tb_path.Text != "" && tb_fileName.Text != "")
+                if (tb_Path.Text != "" && tb_FileName.Text != "")
                 {
-                    using (StreamWriter writer = File.AppendText(@tb_path.Text + @"\" + @tb_fileName.Text + ".txt"))
+                    using (StreamWriter writer = File.AppendText(tb_Path.Text + @"\" + tb_FileName.Text + ".txt"))
                     {
                         foreach (var pair in entries)
                         {
@@ -55,17 +55,17 @@ namespace CSharpCourseLecture80_Project
             DialogResult result = dlg_browse.ShowDialog();
             if (result == DialogResult.OK)
             {
-                tb_path.Text = dlg_browse.SelectedPath;
+                tb_Path.Text = dlg_browse.SelectedPath;
             }
         }
 
         private void btn_addToDictionary_Click(object sender, EventArgs e)
         {
-            if (tb_key.Text != "" & tb_value.Text != "")
+            if (tb_Key.Text != "" & tb_Value.Text != "")
             {
-                dict.Add(tb_key.Text, tb_value.Text);
-                tb_key.Text = "";
-                tb_value.Text = "";
+                dict.Add(tb_Key.Text, tb_Value.Text);
+                tb_Key.Text = "";
+                tb_Value.Text = "";
             }
             else
             {
@@ -80,7 +80,7 @@ namespace CSharpCourseLecture80_Project
 
         private void btn_openInNotepad_Click(object sender, EventArgs e)
         {
-            Process.Start(@"notepad.exe", $"{tb_path.Text.Replace("\\\\", "\\")}\\{tb_fileName.Text}.txt");
+            Process.Start(@"notepad.exe", $"{tb_Path.Text.Replace("\\\\", "\\")}\\{tb_FileName.Text}.txt");
         }
     }
 }

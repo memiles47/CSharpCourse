@@ -19,7 +19,7 @@ namespace CSharpCourseLecture106
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-
+            //This method runs when you click on the Save button.
         }
     }
 }

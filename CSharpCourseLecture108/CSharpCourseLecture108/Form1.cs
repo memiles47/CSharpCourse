@@ -2,6 +2,10 @@
 using System.Drawing;
 using System.Windows.Forms;
 
+/*
+Lecture 180: Drawing simple graphics in a windows form
+*/
+
 namespace CSharpCourseLecture108
 {
     public partial class Form1 : Form

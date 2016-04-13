@@ -36,11 +36,11 @@ namespace CSharpCourseLecture80_Project
                         }
                     }
                     //Write status of action to form
-                    lbl_actionStatus.Text = "Save Complete";
+                    lbl_actionStatus.Text = $"Save Complete";
                 }
                 else
                 {
-                    MessageBox.Show("You must enter a path AND file name for saving to disk");
+                    MessageBox.Show($"You must enter a path AND file name for saving to disk");
                 }
 
             }
@@ -69,7 +69,7 @@ namespace CSharpCourseLecture80_Project
             }
             else
             {
-                MessageBox.Show("You must enter a Key and Value before adding to the dictionary");
+                MessageBox.Show($"You must enter a Key and Value before adding to the dictionary");
             }
         }
 

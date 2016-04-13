@@ -1,6 +1,6 @@
 ﻿namespace CSharpCourseLecture80_Project
 {
-    partial class frm_Main
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -240,7 +240,7 @@
             this.Controls.Add(this.tb_Key);
             this.Controls.Add(this.lbl_Key);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "frm_Main";
+            this.Name = "FrmMain";
             this.Text = "CSharp Course Lecture 80 Project";
             this.ResumeLayout(false);
             this.PerformLayout();

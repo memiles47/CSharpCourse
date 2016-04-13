@@ -6,12 +6,12 @@ using System.Diagnostics;
 
 namespace CSharpCourseLecture80_Project
 {
-    public partial class frm_Main : Form
+    public partial class FrmMain : Form
     {
         //Create dictionary
         Dictionary<string, string> dict = new Dictionary<string, string>();
 
-        public frm_Main()
+        public FrmMain()
         {
             InitializeComponent();
 
